@@ -16437,7 +16437,7 @@ be changed.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><
       <data key="d4" xml:space="preserve"/>
       <data key="d6">
         <y:ImageNode>
-          <y:Geometry height="636.6520169322707" width="1218.3716695717128" x="4134.83518095312" y="-2093.7076919423657"/>
+          <y:Geometry height="636.6520169322707" width="1218.3716695717128" x="4108.267158693692" y="-2093.7076919423657"/>
           <y:Fill color="#CCCCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="607.1858347858561" y="316.32600846613536"/>
@@ -16448,7 +16448,7 @@ be changed.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><
     <node id="n8">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="49.999999999999886" width="493.7258802555134" x="4497.158075611219" y="-1457.055675010095"/>
+          <y:Geometry height="49.999999999999886" width="493.7258802555134" x="4470.5900533517915" y="-1457.055675010095"/>
           <y:Fill color="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="30" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="40.7529296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="483.8828125" x="4.921533877756701" xml:space="preserve" y="4.62353515625">^CULTURE SPLITTING REGIONS^<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -18458,6 +18458,42 @@ splits?<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:Mo
           </data>
         </edge>
       </graph>
+    </node>
+    <node id="n10">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="403.2871880584327" width="336.43484429895443" x="3870.858045877849" y="-1378.3117693809397"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="386.23046875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="332.16015625" x="2.137344024476988" xml:space="preserve" y="8.528359654216274">SOME NOTES ON HYBRIDIZING/DIVERGING CULTURES:
+
+- Diverging can be done in script through the set of
+'create_divergent_culture' effects. In script, you can also use
+the 'can_diverge'/'can_diverge_excluding_cost` triggers to
+check if a character can currently diverge their culture. This
+trigger checks the scripted rule 'can_diverge_culture', and
+will return true if the conditions in that rule are met. That
+scripted rule also works with the hybridize/diverge culture
+window the player uses. As such, if we wanted to make sure
+specific divergences are done exactly when we wanted them
+to be, we could modify that scripted rule with all of the specific
+conditions so that we can control exactly when/where those
+hybrids appear.
+
+- For Hybridizing cultures, everything is the same as above,
+but it uses the 'create_hybrid_culture' effects, the
+'can_hybridize'/'can_hybridize_excluding_cost' triggers, and
+the 'can_hybridize_culture' scripted rule.
+
+- If we do something like this to limit when certain hybrids or
+divergences should appear, we should just make sure that
+everything else that relies on those triggers/rules isn't
+messed with. As far as I know, they are used for the events
+and character interaction that allows the AI to hybridize and
+diverge their culture, and I think some stuff for Nomads.<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
     </node>
     <edge id="n0::e0" source="n0::n5" target="n0::n6">
       <data key="d10">
